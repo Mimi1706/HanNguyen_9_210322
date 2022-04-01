@@ -1,0 +1,48 @@
+.heroBanner {
+  height: 10em;
+  width: 100%;
+  border-radius: 25px;
+  position: relative;
+}
+
+.heroBannerImg {
+  border-radius: 25px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.heroBannerShade {
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.heroBannerText {
+  position: absolute;
+  font-size: 2em;
+  color: white;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 657px) {
+  .heroBanner {
+    height: 8em;
+  }
+
+  .heroBannerText {
+    position: relative;
+    font-size: 1.5em;
+    width: 9.5em;
+    margin-left: 1em;
+    padding-top: 1.1em;
+    text-align: left;
+    left: 30%;
+    top: 40%;
+  }
+}

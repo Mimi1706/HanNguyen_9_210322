@@ -1,0 +1,46 @@
+.collapsible {
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.collapsibleToggle {
+  background-color: #ff6060;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1em;
+  position: relative;
+}
+
+.collapsibleArrow {
+  width: 1.2em;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+
+.collapsibleContent p {
+  padding: 0em 1em 1em 1em;
+  font-weight: 300;
+  font-size: 1em;
+  text-align: left;
+}
+
+.collapsibleContentWrapper {
+  height: 0em;
+  overflow: hidden;
+}
+
+.showContent {
+  height: auto;
+  overflow: hidden;
+}
+
+.showArrow {
+  rotate: 180deg;
+}
