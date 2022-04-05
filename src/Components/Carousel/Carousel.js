@@ -4,6 +4,7 @@ import { useState } from "react"
 
 const Carousel = (props) => {
   const [currentImg, setCurrentImg] = useState(0)
+  const maxImg = props.maxImg
 
   return (
     <div className="carousel">
@@ -13,7 +14,9 @@ const Carousel = (props) => {
           alt="flèche précédente"
           className="carouselArrow"
           onClick={() => {
-            setCurrentImg(currentImg - 1)
+            currentImg === 0
+              ? setCurrentImg(currentImg + maxImg - 1)
+              : setCurrentImg(currentImg - 1)
           }}
         />
       </button>
@@ -30,7 +33,9 @@ const Carousel = (props) => {
           alt="flèche suivante"
           className="carouselArrow"
           onClick={() => {
-            setCurrentImg(currentImg + 1)
+            currentImg === maxImg - 1
+              ? setCurrentImg(0)
+              : setCurrentImg(currentImg + 1)
           }}
         />
       </button>
