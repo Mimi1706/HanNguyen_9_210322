@@ -23,10 +23,10 @@ const HousingPage = () => {
       {data.map((housing) => {
         return housing.id === idURL ? (
           <Fragment key={housing.id}>
-            <Carousel src={housing.pictures} />
+            <Carousel src={housing.pictures} maxImg={housing.pictures.length} />
             <section className="informations">
               <h1 className="housingTitle">{housing.title}</h1>
-              <h3 className="housingLocation">{housing.location}</h3>
+              <h2 className="housingLocation">{housing.location}</h2>
               <div className="housingTagList">
                 {housing.tags.map((tag, index) => (
                   <Tag tag={tag} key={index} />
