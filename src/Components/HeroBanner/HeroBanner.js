@@ -1,6 +1,6 @@
 import "./HeroBanner.css"
 
-function HeroBanner(props) {
+const HeroBanner = (props) => {
   return (
     <section className={props.className}>
       <img src={props.img} alt={props.alt} className="heroBannerImg"></img>

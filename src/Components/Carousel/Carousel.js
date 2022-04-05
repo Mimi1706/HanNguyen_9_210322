@@ -1,44 +1,41 @@
-import { Component } from "react"
 import "./Carousel.css"
 import arrow from "../../Assets/arrow.png"
+import { useState } from "react"
 
-class Carousel extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { index: 0 }
-  }
+const Carousel = (props) => {
+  const [currentImg, setCurrentImg] = useState(0)
 
-  nextImg = () => {
-    this.setState({
-      index: this.state.index + 1,
-    })
-  }
-
-  previousImg = () => {
-    this.setState({
-      index: this.state.index + this.index.length - 1,
-    })
-  }
-
-  render() {
-    return (
-      <div className="carousel">
-        <button className="previousImgButton" onClick={this.previousImg}>
-          <img src={arrow} alt="flèche précédente" className="carouselArrow" />
-        </button>
-
+  return (
+    <div className="carousel">
+      <button className="previousImgButton">
         <img
-          className="carouselImg"
-          src={this.props.src[this.props.index]}
-          alt="images du carousel"
-        ></img>
+          src={arrow}
+          alt="flèche précédente"
+          className="carouselArrow"
+          onClick={() => {
+            setCurrentImg(currentImg - 1)
+          }}
+        />
+      </button>
 
-        <button className="nextImgButton" onClick={this.nextImg}>
-          <img src={arrow} alt="flèche suivante" className="carouselArrow" />
-        </button>
-      </div>
-    )
-  }
+      <img
+        className="carouselImg"
+        src={props.src[currentImg]}
+        alt="images du carousel"
+      ></img>
+
+      <button className="nextImgButton">
+        <img
+          src={arrow}
+          alt="flèche suivante"
+          className="carouselArrow"
+          onClick={() => {
+            setCurrentImg(currentImg + 1)
+          }}
+        />
+      </button>
+    </div>
+  )
 }
 
 export default Carousel

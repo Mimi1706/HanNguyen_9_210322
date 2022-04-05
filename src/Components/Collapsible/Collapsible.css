@@ -1,5 +1,4 @@
 .collapsible {
-  background-color: #f7f7f7;
   border-radius: 5px;
   margin-bottom: 1em;
 }
@@ -24,11 +23,23 @@
   top: 12px;
 }
 
-.collapsibleContent p {
-  padding: 0em 1em 1em 1em;
+.collapsibleContent {
+  padding: 1em;
   font-weight: 300;
   font-size: 1em;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  margin-top: -5px;
+  color: #ff6060;
+}
+
+.collapsibleContent p {
   text-align: left;
+}
+
+.collapsibleContent li {
+  text-align: left;
+  list-style: none;
 }
 
 .collapsibleContentWrapper {

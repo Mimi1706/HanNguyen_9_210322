@@ -22,7 +22,7 @@ function Collapsible(props) {
             : "collapsibleContentWrapper"
         }
       >
-        <div className="collapsibleContent">{props.children}</div>
+        <div className="collapsibleContent">{props.text}</div>
       </div>
     </div>
   )

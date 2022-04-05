@@ -1,0 +1,108 @@
+.informations {
+  height: auto;
+  width: 100%;
+  margin: 2em 0em;
+  position: relative;
+  color: #ff6060;
+}
+
+.housingTitle {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.housingLocation {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+.housingTagList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.housingRatingWrapper {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+}
+
+.housingHostName {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 0.9em;
+  position: absolute;
+  right: 5em;
+  top: 0;
+  text-align: right;
+  width: 5em;
+}
+
+.housingHostPicture {
+  width: 3.5em;
+  height: 3.5em;
+  object-fit: cover;
+  border-radius: 5em;
+  position: absolute;
+  margin-top: -0.8em;
+  right: 0;
+  top: 0;
+}
+
+.collapsibleHousingWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.collapsibleHousingWrapper .collapsible {
+  width: 48%;
+}
+
+.housingEquipement {
+  color: #ff6060;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 657px) {
+  .informations {
+    padding-bottom: 2.5em;
+    margin-bottom: 2em;
+  }
+
+  .housingRatingWrapper {
+    position: absolute;
+    bottom: 6px;
+    right: auto;
+  }
+
+  .housingHostName {
+    bottom: 0em;
+    top: auto;
+  }
+
+  .housingHostPicture {
+    top: auto;
+    bottom: 0;
+    margin-bottom: -0.8em;
+  }
+
+  .collapsibleHousingWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+
+  .collapsibleHousingWrapper .collapsible {
+    width: 100%;
+  }
+}
