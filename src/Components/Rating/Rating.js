@@ -5,9 +5,9 @@ const Rating = (props) => {
     let allStars = []
     for (let i = 0; i < 5; i++) {
       if (props.stars > i) {
-        allStars.push(<i className="fa-solid fa-star"></i>)
+        allStars.push(<i className="fa-solid fa-star" key={i}></i>)
       } else {
-        allStars.push(<i className="fa-solid fa-star grey"></i>)
+        allStars.push(<i className="fa-solid fa-star grey" key={i}></i>)
       }
     }
     return allStars
