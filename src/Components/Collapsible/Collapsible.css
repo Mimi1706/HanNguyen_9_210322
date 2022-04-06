@@ -1,26 +1,21 @@
 .collapsible {
   border-radius: 5px;
   margin-bottom: 1em;
+  position: relative;
 }
 
-.collapsibleToggle {
+.collasibleLabel {
   background-color: #ff6060;
   color: white;
   border: none;
   border-radius: 5px;
   padding: 0.5em 1em;
-  width: 100%;
   text-align: left;
   font-weight: 500;
   font-size: 1em;
   position: relative;
-}
-
-.collapsibleArrow {
-  width: 1.2em;
-  position: absolute;
-  right: 10px;
-  top: 12px;
+  cursor: pointer;
+  list-style: none;
 }
 
 .collapsibleContent {
@@ -31,27 +26,17 @@
   border-radius: 10px;
   margin-top: -5px;
   color: #ff6060;
-}
-
-.collapsibleContent p {
-  text-align: left;
-}
-
-.collapsibleContent li {
-  text-align: left;
   list-style: none;
 }
 
-.collapsibleContentWrapper {
-  height: 0em;
-  overflow: hidden;
-}
-
-.showContent {
-  height: auto;
-  overflow: hidden;
+.collapsibleArrow {
+  width: 1.5em;
+  position: absolute;
+  right: 10px;
+  top: 12px;
 }
 
 .showArrow {
   rotate: 180deg;
+  top: 9px;
 }
