@@ -10,6 +10,13 @@
   width: 50px;
 }
 
+.carouselImgNumber {
+  position: absolute;
+  bottom: 5px;
+  right: 50%;
+  color: white;
+}
+
 .previousImgButton {
   transform: rotate(90deg);
   position: absolute;
@@ -28,6 +35,10 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 .carouselImg {

@@ -8,7 +8,11 @@ const Carousel = (props) => {
 
   return (
     <div className="carousel">
-      <button className="previousImgButton">
+      <button
+        className={
+          maxImg === 1 ? "previousImgButton hidden" : "previousImgButton"
+        }
+      >
         <img
           src={arrow}
           alt="flèche précédente"
@@ -27,7 +31,13 @@ const Carousel = (props) => {
         alt="images du carousel"
       ></img>
 
-      <button className="nextImgButton">
+      <span className="carouselImgNumber">
+        {currentImg + 1}/{maxImg}
+      </span>
+
+      <button
+        className={maxImg === 1 ? "nextImgButton hidden" : "nextImgButton"}
+      >
         <img
           src={arrow}
           alt="flèche suivante"
