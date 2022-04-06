@@ -68,11 +68,6 @@
   width: 48%;
 }
 
-.housingEquipement {
-  color: #ff6060;
-  font-weight: 300;
-}
-
 @media screen and (max-width: 657px) {
   .informations {
     padding-bottom: 2.5em;
