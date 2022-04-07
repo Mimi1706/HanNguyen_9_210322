@@ -7,19 +7,17 @@ import Tag from "../../Components/Tag/Tag"
 import Collapsible from "../../Components/Collapsible/Collapsible"
 import Rating from "../../Components/Rating/Rating"
 
-import ErrorPage from "../ErrorPage/ErrorPage"
-
 const HousingPage = () => {
-  const [housing, setData] = useState([])
-  let idURL = new URL(document.location).searchParams.get("id")
+  const [housing, setHousingData] = useState([])
+  let { idURL } = useParams()
 
   useEffect(() => {
-    fetch("./data.json")
+    fetch("../data.json")
       .then((response) => response.json())
       .then((responseData) => {
         for (let i = 0; i < responseData.length; i++) {
           if (responseData[i].id === idURL) {
-            setData(responseData[i])
+            setHousingData(responseData[i])
           }
         }
       })
@@ -27,7 +25,7 @@ const HousingPage = () => {
 
   return (
     <main>
-      {housing.id === idURL ? (
+      {idURL === housing.id && (
         <Fragment key={housing.id}>
           <Carousel src={housing.pictures} maxImg={housing.pictures.length} />
           <section className="informations">
@@ -62,8 +60,6 @@ const HousingPage = () => {
             />
           </section>
         </Fragment>
-      ) : (
-        <ErrorPage />
       )}
     </main>
   )
