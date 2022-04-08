@@ -18,7 +18,7 @@ const HomePage = () => {
   return (
     <main>
       <HeroBanner
-        className="heroBanner"
+        className="homeBanner"
         text="Chez vous, partout et ailleurs"
         img={imgBanner}
         alt="Paysage de rochers dans l'eau"
