@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import "./HousingPage.css"
 
 import Carousel from "../../Components/Carousel/Carousel"
@@ -10,6 +10,7 @@ import Rating from "../../Components/Rating/Rating"
 const HousingPage = () => {
   const [housing, setHousingData] = useState([])
   let { idURL } = useParams()
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch("../data.json")
@@ -18,10 +19,16 @@ const HousingPage = () => {
         for (let i = 0; i < responseData.length; i++) {
           if (responseData[i].id === idURL) {
             setHousingData(responseData[i])
+            return responseData[i]
           }
         }
       })
-  }, [idURL])
+      .then((responseData) => {
+        if (responseData === undefined) {
+          navigate("*")
+        }
+      })
+  }, [idURL, navigate])
 
   return (
     <main>
